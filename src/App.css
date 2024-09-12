@@ -27,6 +27,36 @@ body {
   text-align: center;
 }
 
+.play-button {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 50%; /* Hacer el botón circular */
+  cursor: pointer;
+  position: relative; /* Para posicionar el triángulo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.play-button::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 15px solid white; /* Crear el triángulo */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+}
+
+.play-button:hover {
+  background-color: #3498db;
+}
+
+
 .greeting {
   font-size: 2rem;
   color: #535050;
@@ -48,8 +78,12 @@ body {
     rgba(0, 0, 0, 1) 50%,
     rgba(0, 0, 0, 0) 100%
   );
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
-
+.photo.fade {
+  opacity: 1;
+}
 h2 {
   width: 70%;
   margin: 0 auto;
