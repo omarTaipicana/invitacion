@@ -66,12 +66,12 @@ function App() {
       <h1 className="greeting">Invitación</h1>
       {!isPlaying && (
         <button onClick={handlePlayMusic} className="play-button">
-              ............Play
+           
         </button>
       )}
 
       <audio ref={audioRef} preload="auto">
-        <source src="../public/cancion.mp3" type="audio/mpeg" />
+        <source src="../cancion.mp3" type="audio/mpeg" />
         Tu navegador no soporta el elemento de audio.
       </audio>
       <div className="slider">
