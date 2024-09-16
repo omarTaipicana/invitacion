@@ -82,9 +82,7 @@ function App() {
         />
       </div>
       <h2>
-        Tenemos el gusto de invitarte a nuestra boda civil que se llevara a cabo
-        el día míercoles 18 de septiembre del 2024, a las 15H00 en el Registro
-        Civil de la ciudad de Latacunga.
+      Tenemos el gusto de invitarte a nuestra boda civil que se llevará a cabo el día miércoles 18 de septiembre del 2024, a las 15H00 en el Registro Civil de la ciudad de Latacunga.
       </h2>
 
       <div className="countdown">
