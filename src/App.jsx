@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import song from "../public/cancion.mp3";
 import "./App.css";
 const images = [
   "../foto1.jpg",
@@ -9,14 +8,14 @@ const images = [
   "../foto5.jpg",
 ];
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false); // Estado para controlar la reproducción de la música
-  const audioRef = useRef(null); // Referencia al elemento de audio
+  const [isPlaying, setIsPlaying] = useState(false); 
+  const audioRef = useRef(null); 
 
   const handlePlayMusic = () => {
     const audio = audioRef.current;
     if (audio) {
       audio.play();
-      setIsPlaying(true); // Actualizar estado a 'true' cuando la música se esté reproduciendo
+      setIsPlaying(true); 
     }
   };
 
@@ -29,16 +28,16 @@ function App() {
   });
 
   useEffect(() => {
-    // Cambia la imagen cada 3 segundos
+
     const imageInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
-    return () => clearInterval(imageInterval); // Limpia el intervalo cuando el componente se desmonte
+    return () => clearInterval(imageInterval); 
   }, []);
 
   const calculateTimeLeft = () => {
-    const eventDate = new Date("2024-09-18T15:00:00");
+    const eventDate = new Date("2024-11-23T15:00:00");
     const currentTime = new Date();
     const difference = eventDate - currentTime;
 
